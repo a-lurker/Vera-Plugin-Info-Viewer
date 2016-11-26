@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns="urn:schemas-upnp-org:device-1-0">
+   <specVersion>
+      <major>1</major>
+      <minor>0</minor>
+   </specVersion>
+   <device>
+      <deviceType>urn:schemas-a-lurker-com:device:InfoViewer:1</deviceType>
+      <friendlyName>Info Viewer</friendlyName>
+      <manufacturer>A Lurker</manufacturer>
+      <staticJson>D_InfoViewer1.json</staticJson>
+      <serviceList>
+         <service>
+            <serviceType>urn:schemas-a-lurker-com:service:InfoViewer:1</serviceType>
+            <serviceId>urn:a-lurker-com:serviceId:InfoViewer1</serviceId>
+            <SCPDURL>S_InfoViewer1.xml</SCPDURL>
+         </service>
+      </serviceList>
+      <implementationList>
+         <implementationFile>I_InfoViewer1.xml</implementationFile>
+      </implementationList>
+   </device>
+</root>

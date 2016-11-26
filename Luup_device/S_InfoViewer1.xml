@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<scpd xmlns="urn:schemas-upnp-org:service-1-0">
+<specVersion>
+  <major>1</major>
+  <minor>0</minor>
+</specVersion>
+<serviceStateTable>
+     <stateVariable>
+      <name>LuaPattern</name>
+      <sendEventsAttribute>no</sendEventsAttribute>
+      <dataType>string</dataType>
+      <defaultValue></defaultValue>
+     </stateVariable>
+   </serviceStateTable>
+   <actionList>
+      <action>
+         <name>SetParameters</name>
+         <argumentList>
+            <argument>
+               <name>newLuaPattern</name>
+               <direction>in</direction>
+               <relatedStateVariable>LuaPattern</relatedStateVariable>
+            </argument>
+         </argumentList>
+      </action>
+   </actionList>
+</scpd>

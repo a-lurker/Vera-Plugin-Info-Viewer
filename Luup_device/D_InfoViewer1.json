@@ -1,0 +1,124 @@
+{
+    "flashicon": "https://a-lurker.github.io/icons/Question_mark_50_50.png",
+    "default_icon": "https://a-lurker.github.io/icons/Question_mark_50_50.png",
+    "inScene": "0",
+    "DisplayStatus":{},
+    "doc_url":{
+        "doc_language":1,
+        "doc_manual":1,
+        "doc_version":1,
+        "doc_platform":0,
+        "doc_page":"devices"
+    },
+    "Tabs":[
+
+	{
+		"Label": {
+			"text": "Set Pattern"
+		},
+		"Position": "0",
+		"TabType": "flash",
+		"SceneGroup":[
+			{
+				"id": "1",
+				"top": "1",
+				"left": "0",
+				"x": "2",
+				"y": "2"
+			}
+		],
+		"ControlGroup": [
+			{
+				"id": "1",
+				"scenegroup": "1"
+			}
+		],
+		"Control": [
+			{
+				"ControlGroup": "1",
+				"ControlType": "label",
+				"Label": {
+					"text": "Lua pattern:"
+				},
+				"top": "0",
+				"Display": {
+					"Top": 20,
+					"Left": 50,
+					"Width": 120,
+					"Height": 20
+				}
+			},
+			{
+				"ControlGroup": "1",
+				"ControlType": "variable",
+				"top": "0",
+				"left": "1",
+				"Display": {
+					"Service": "urn:a-lurker-com:serviceId:InfoViewer1",
+					"Variable": "LuaPattern",
+					"Top": 20,
+					"Left": 130,
+					"Width": 75,
+					"Height": 20
+				}
+			},
+			{
+                    	"ControlType": "input",
+				"ID": "thePattern",
+				"Style": "string",
+				"Display":{
+					"Top": 50,
+					"Left": 50,
+					"Width": 150,
+					"Height": 20
+				}
+			},
+			{
+				"ControlType": "button",
+				"Label": {
+					"text": "Update"
+				},
+				"Display": {
+					"Top": 90,
+					"Left": 50,
+					"Width": 70,
+					"Height": 20
+				},
+				"Command": {
+					"Service": "urn:a-lurker-com:serviceId:InfoViewer1",
+					"Action": "SetParameters",
+					"Parameters": [
+						{
+						"Name": "newLuaPattern",
+						"ID": "thePattern"
+						}
+					]
+				}
+			},
+			{
+				"ControlType": "label",
+				"Label": {
+					"text": "<a href='/port_3480/data_request?id=lr_al_info' target='_blank'>Info Viewer page</a>"
+				},
+				"Display": {
+					"Top": 130,
+					"Left": 50,
+					"Width": 120,
+					"Height": 20
+				}
+			}
+		]
+	},
+        {
+            "Label":{
+                "lang_tag":"advanced",
+                "text":"Advanced"
+            },
+            "Position":"1",
+            "TabType":"javascript",
+            "ScriptName":"shared.js",
+            "Function":"advanced_device"
+        }
+    ],
+    "DeviceType":"urn:schemas-a-lurker-com:device:InfoViewer:1"
+}

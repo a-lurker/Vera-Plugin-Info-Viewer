@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<implementation>
+   <settings>
+      <protocol>crlf</protocol>
+      <handleChildren>1</handleChildren>
+   </settings>
+   <files>L_InfoViewer1.lua</files>
+   <startup>luaStartUp</startup>
+   <actionList>
+     <action>
+      <serviceId>urn:a-lurker-com:serviceId:InfoViewer1</serviceId>
+      <name>SetParameters</name>
+      <run>
+        setParms(lul_settings.newLuaPattern)
+      </run>
+    </action>
+  </actionList>
+</implementation>
